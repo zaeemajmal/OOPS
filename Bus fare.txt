@@ -1,0 +1,16 @@
+class vehicle:
+    def __init__(self,capacity,Sub_total,maintainance):
+        self.Sub_total = Sub_total
+        self.maintainance = maintainance
+        self.capacity = capacity
+    def price(self,capacity,Sub_total,maintainance):
+        maintainance = Sub_total % 10
+        total = Sub_total + (maintainance)
+        print(total)     
+       
+class bus(vehicle):
+    def __init__(self,capacity,Sub_total, maintainance,Total):
+        super().__init__(Sub_total, maintainance,Total)        
+seats = int(input("Enter amount of seats:- "))      
+ob = bus(seats,100*seats,(100*seats % 10),0)
+ob.price(seats,100*seats,(100*seats % 10))         
